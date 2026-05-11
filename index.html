@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,11 +10,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
 
 body{
 font-family:'Plus Jakarta Sans',sans-serif;
 scroll-behavior:smooth;
+}
+
+.hero-bg{
+background:radial-gradient(circle at top right,#dcfce7 0%,#ffffff 70%);
 }
 
 .glass-card{
@@ -28,13 +33,25 @@ background:linear-gradient(135deg,#064e3b 0%,#10b981 100%);
 -webkit-text-fill-color:transparent;
 }
 
-.hero-bg{
-background:radial-gradient(circle at top right,#dcfce7 0%,#ffffff 70%);
-}
-
 .card-hover:hover{
 transform:translateY(-6px);
 transition:all .3s ease;
+}
+
+.fade-up{
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -52,7 +69,7 @@ transition:all .3s ease;
 </div>
 
 <span class="font-extrabold text-xl text-emerald-900">
-Maps SEO <span class="text-emerald-500"></span>
+Maps SEO
 </span>
 </div>
 
@@ -64,225 +81,431 @@ CONTACTAR
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg px-6 py-20 text-center">
+<section class="hero-bg px-6 py-24 text-center fade-up">
 <div class="max-w-5xl mx-auto">
 
 <span class="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-• Soluciones Locales •
+• Visibilidad Local •
 </span>
 
 <h1 class="text-4xl md:text-6xl font-extrabold text-emerald-900 leading-tight mb-6">
-Haz que tu negocio aparezca en <span class="gradient-text">Google</span>
+Haz que tu negocio aparezca primero en <span class="gradient-text">Google Maps</span>
 </h1>
 
-<p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8">
-Muchos clientes buscan en Google Maps antes de comprar.  
-Si tu negocio no aparece bien, otro vende primero.
+<p class="text-lg text-slate-600 max-w-3xl mx-auto mb-10">
+Miles de personas buscan negocios todos los días en Google.
+Si tu negocio no aparece bien optimizado, simplemente terminan comprando en otro lugar.
 </p>
 
-<div class="glass-card max-w-3xl mx-auto p-6 rounded-3xl text-left mb-10">
-<h3 class="font-bold text-emerald-700 text-lg mb-3">
-¿Quién soy y por qué hago esto?
-</h3>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 
-<p class="text-slate-600 leading-relaxed">
-Soy Adrian un <strong>Tecnólogo en Desarrollo de Sistemas</strong>.  
-En mi proyecto de grado investigué cómo las personas buscan negocios cercanos desde el celular y cómo Google muestra resultados locales. Detecté que muchos negocios pierden clientes por errores simples: mala ubicación, pocas fotos, información incompleta o perfiles abandonados.
-</p>
-
-<div class="flex items-center gap-3 my-6">
-    <div class="h-px bg-emerald-200 flex-1"></div>
-    <span class="text-emerald-500 text-sm font-bold">HOY</span>
-    <div class="h-px bg-emerald-200 flex-1"></div>
-</div>
-
-<p class="text-slate-600 leading-relaxed mb-8">
-Hoy Google evoluciona constantemente con funciones de inteligencia artificial que ayudan a los usuarios a decidir dónde comprar. Mi trabajo es preparar tu negocio para aprovechar esos cambios y destacar frente a la competencia.
-</p>
-
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
-    
 <a href="#planes" class="bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-emerald-700 transition-all">
 Ver Planes
 </a>
 
-<a href="#beneficios" class="bg-white border border-emerald-100 text-emerald-900 px-8 py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all">
+<a href="#como-funciona" class="bg-white border border-emerald-100 text-emerald-900 px-8 py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all">
 ¿Cómo funciona?
 </a>
+
+</div>
+</div>
+</section>
+
+<!-- TRUST -->
+<section class="border-y border-emerald-100 bg-white py-6">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-wrap justify-center items-center gap-8 text-sm font-semibold text-emerald-900/70">
+
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-magnifying-glass text-emerald-500"></i>
+SEO Local
 </div>
 
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-location-dot text-emerald-500"></i>
+Google Maps
+</div>
+
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-star text-emerald-500"></i>
+Reseñas 5★
+</div>
+
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-globe text-emerald-500"></i>
+Recorrido 360°
+</div>
+
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-award text-emerald-500"></i>
+SEO IA
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- GEMINI -->
+<section id="como-funciona" class="bg-emerald-950 text-white px-6 py-24 relative overflow-hidden">
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center max-w-3xl mx-auto mb-16">
+
+<span class="inline-block px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-widest mb-6">
+IA • Google Gemini
+</span>
+
+<h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+La inteligencia artificial ya decide qué negocios mostrar
+</h2>
+
+<p class="text-emerald-100/80 text-lg leading-relaxed">
+Google ahora usa inteligencia artificial para recomendar negocios.
+Si tu perfil está vacío o mal optimizado, simplemente no apareces.
+</p>
+
+</div>
+
+<div class="grid lg:grid-cols-2 gap-10 items-center">
+
+<div>
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" class="rounded-3xl shadow-2xl w-full object-cover">
+</div>
+
+<div class="space-y-5">
+
+<div class="bg-white/5 border border-white/10 rounded-3xl p-6">
+<h3 class="font-bold text-xl mb-2">El usuario pregunta</h3>
+<p class="text-white/70">
+“¿Dónde comer cerca?”
+“¿Quién vende uniformes deportivos?”
+“¿Qué negocio tiene mejores reseñas?”
+</p>
+</div>
+
+<div class="bg-white/5 border border-white/10 rounded-3xl p-6">
+<h3 class="font-bold text-xl mb-2">Google analiza</h3>
+<p class="text-white/70">
+Fotos, horarios, reseñas, actividad, categorías y toda la información de tu negocio.
+</p>
+</div>
+
+<div class="bg-emerald-500/20 border border-emerald-400 rounded-3xl p-6">
+<h3 class="font-bold text-xl mb-2 text-emerald-300">
+Resultado
+</h3>
+<p class="text-white/80">
+Tu negocio aparece recomendado...
+O queda invisible frente a la competencia.
+</p>
+</div>
+
+</div>
+</div>
 </div>
 </section>
 
 <!-- DATOS -->
-
 <section class="px-6 py-20 bg-emerald-900 text-white">
 <div class="max-w-6xl mx-auto">
 
-<!-- TITULO -->
 <div class="text-center mb-16">
 <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-Resultados que no se pueden ignorar
+Google Maps ya influye en las decisiones de compra
 </h2>
 
 <p class="text-emerald-100 max-w-2xl mx-auto text-lg">
-Datos reales que muestran por qué hoy estar bien en Google puede traer más clientes.
+Cada día más personas buscan negocios cercanos antes de comprar.
 </p>
 </div>
 
-<!-- GRID -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<!-- CARD 1 -->
 <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
 <div class="text-5xl font-extrabold text-emerald-600 mb-3">72%</div>
-<p class="text-slate-600 leading-relaxed">
-De personas en Santander usan Google Maps para buscar negocios cercanos.
+<p class="text-slate-600">
+De personas usan Google Maps para buscar negocios cercanos.
 </p>
 </div>
 
-<!-- CARD 2 -->
-<div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-<div class="text-5xl font-extrabold text-emerald-600 mb-3">80%</div>
-<p class="text-slate-600 leading-relaxed">
-Negocios que mejoran su presencia digital atraen más clientes.
-</p>
-</div>
-
-<!-- CARD 3 -->
-<div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-<div class="text-5xl font-extrabold text-emerald-600 mb-3">46%</div>
-<p class="text-slate-600 leading-relaxed">
-De búsquedas en Google tienen intención local: “cerca de mí”.
-</p>
-</div>
-
-<!-- CARD 4 -->
-<div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-<div class="text-5xl font-extrabold text-emerald-600 mb-3">15</div>
-<p class="text-slate-600 leading-relaxed">
-Clientes potenciales al día puede perder un negocio mal optimizado.
-</p>
-</div>
-
-<!-- CARD 5 -->
 <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
 <div class="text-5xl font-extrabold text-emerald-600 mb-3">87%</div>
-<p class="text-slate-600 leading-relaxed">
+<p class="text-slate-600">
 Consumidores revisan Google antes de visitar negocios locales.
 </p>
 </div>
 
-<!-- CARD 6 -->
 <div class="bg-white rounded-3xl p-8 text-center shadow-lg">
-<div class="text-5xl font-extrabold text-emerald-600 mb-3">2.3x</div>
-<p class="text-slate-600 leading-relaxed">
-Más visibilidad para perfiles completos frente a incompletos.
+<div class="text-5xl font-extrabold text-emerald-600 mb-3">46%</div>
+<p class="text-slate-600">
+De búsquedas tienen intención local.
 </p>
 </div>
 
 </div>
+</div>
+</section>
 
+<!-- BEFORE AFTER -->
+<section class="px-6 py-24 bg-slate-50">
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-emerald-900 mb-4">
+La diferencia que ven tus futuros clientes
+</h2>
+
+<p class="text-slate-600 max-w-2xl mx-auto">
+Un perfil abandonado pierde ventas. Uno optimizado las atrae.
+</p>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-8">
+
+<div class="bg-white rounded-3xl p-8 border border-slate-200">
+<span class="bg-slate-800 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+Antes
+</span>
+
+<div class="mt-6 bg-slate-100 rounded-3xl p-6 grayscale opacity-80">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="rounded-2xl h-52 w-full object-cover mb-5">
+
+<ul class="space-y-3 text-slate-500">
+<li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> Sin fotos profesionales</li>
+<li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> Perfil abandonado</li>
+<li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> Mala ubicación</li>
+<li><i class="fa-solid fa-xmark text-red-500 mr-2"></i> No aparece en búsquedas</li>
+</ul>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 border-2 border-emerald-500 shadow-xl">
+<span class="bg-emerald-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+Después
+</span>
+
+<div class="mt-6 rounded-3xl overflow-hidden">
+<div class="grid grid-cols-3 gap-1 mb-5">
+<img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1200&auto=format&fit=crop" class="h-40 w-full object-cover">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" class="h-40 w-full object-cover">
+<img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=1200&auto=format&fit=crop" class="h-40 w-full object-cover">
+</div>
+
+<ul class="space-y-3 text-slate-700">
+<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Fotos profesionales</li>
+<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> SEO Local optimizado</li>
+<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Más llamadas y mensajes</li>
+<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Más confianza</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ESTADISTICAS -->
+<section class="px-6 py-20 bg-emerald-900 text-white">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">Resultados que no se pueden ignorar</h2>
+<p class="text-emerald-100 max-w-2xl mx-auto text-lg">Datos reales que muestran por qué hoy estar bien en Google puede traer más clientes.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">72%</div><p class="text-slate-600">De personas en Santander usan Google Maps para buscar negocios cercanos.</p></div>
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">80%</div><p class="text-slate-600">Negocios que mejoran su presencia digital atraen más clientes.</p></div>
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">46%</div><p class="text-slate-600">De búsquedas en Google tienen intención local.</p></div>
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">15</div><p class="text-slate-600">Clientes potenciales al día puede perder un negocio mal optimizado.</p></div>
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">87%</div><p class="text-slate-600">Consumidores revisan Google antes de visitar negocios locales.</p></div>
+<div class="bg-white rounded-3xl p-8 text-center shadow-lg"><div class="text-5xl font-extrabold text-emerald-600 mb-3">2.3x</div><p class="text-slate-600">Más visibilidad para perfiles completos frente a incompletos.</p></div>
+</div>
 </div>
 </section>
 
 <!-- BENEFICIOS -->
-<section id="beneficios" class="px-6 py-20 bg-slate-50">
+<section class="px-6 py-20 bg-white">
 <div class="max-w-6xl mx-auto">
 
-<!-- TITULO -->
 <div class="text-center mb-14">
 <h2 class="text-4xl font-extrabold text-emerald-900 mb-4">
-¿Qué puedo mejorar en tu negocio?
+¿Qué hago exactamente en tu negocio?
 </h2>
 
 <p class="text-slate-600 max-w-2xl mx-auto">
-No necesitas gastar en anuncios para empezar. Primero hay que ordenar tu presencia digital para que más personas te encuentren, confíen en tu negocio y te contacten.
+No se trata solo de aparecer en Google.
+Se trata de generar confianza para que más personas te escriban y compren.
+</p>
 </div>
 
-<!-- GRID -->
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<!-- CARD 1 -->
 <div class="glass-card p-8 rounded-3xl text-center card-hover">
 <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
 <i class="fa-solid fa-map-location-dot text-2xl"></i>
 </div>
-
 <h3 class="font-bold text-xl mb-3">Google Maps</h3>
-
-<p class="text-slate-600">
-Creo, recupero o corrijo tu perfil para que las personas te encuentren fácilmente.
-</p>
+<p class="text-slate-600">Creo o recupero tu perfil para que aparezcas correctamente.</p>
 </div>
 
-<!-- CARD 2 -->
 <div class="glass-card p-8 rounded-3xl text-center card-hover">
 <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
 <i class="fa-solid fa-camera text-2xl"></i>
 </div>
-
 <h3 class="font-bold text-xl mb-3">Imagen Profesional</h3>
-
-<p class="text-slate-600">
-Fotos, horarios, descripción y datos claros que generan confianza inmediata.
-</p>
+<p class="text-slate-600">Fotos, descripción y datos claros que generan confianza.</p>
 </div>
 
-<!-- CARD 3 -->
 <div class="glass-card p-8 rounded-3xl text-center card-hover">
 <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
 <i class="fa-solid fa-magnifying-glass text-2xl"></i>
 </div>
-
 <h3 class="font-bold text-xl mb-3">SEO Local</h3>
+<p class="text-slate-600">Optimización para aparecer mejor cuando buscan lo que vendes.</p>
+</div>
 
-<p class="text-slate-600">
-Optimizo tu perfil para aparecer mejor cuando buscan lo que vendes en tu zona.
+</div>
+</div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="border-y border-emerald-100 bg-white py-6">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-80 text-sm font-semibold text-emerald-900">
+<div class="flex items-center gap-2"><i class="fa-solid fa-magnifying-glass text-emerald-500"></i> SEO Local</div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-map-location-dot text-emerald-500"></i> Google Maps</div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-star text-emerald-500"></i> Reseñas 5★</div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-globe text-emerald-500"></i> Recorridos 360°</div>
+<div class="flex items-center gap-2"><i class="fa-solid fa-award text-emerald-500"></i> Certificado BIGSEO</div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="bg-slate-50 px-6 py-24">
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-emerald-900 mb-4">
+Negocios que ya lo viven
+</h2>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-6">
+
+<div class="bg-white p-8 rounded-3xl shadow-lg">
+<div class="flex gap-1 text-yellow-400 mb-4">
+★★★★★
+</div>
+<p class="text-slate-600 mb-6">
+“En pocas semanas empezaron a escribirme mucho más desde Google Maps.”
 </p>
+<strong>Sebastian E.</strong>
+<p class="text-sm text-slate-500">Chachan Sports · Girón</p>
 </div>
 
-<!-- CARD 4 -->
-<div class="glass-card p-8 rounded-3xl text-center card-hover">
-<div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
-<i class="fa-brands fa-whatsapp text-2xl"></i>
+<div class="bg-white p-8 rounded-3xl shadow-lg">
+<div class="flex gap-1 text-yellow-400 mb-4">
+★★★★★
 </div>
-
-<h3 class="font-bold text-xl mb-3">Más Contactos</h3>
-
-<p class="text-slate-600">
-Facilito que te escriban por WhatsApp o te llamen con un solo toque.
+<p class="text-slate-600 mb-6">
+“Ahora aparezco cuando buscan uniformes deportivos y eso me cambió el negocio.”
 </p>
+<strong>Rolando N.</strong>
+<p class="text-sm text-slate-500">R7 Sports · Girón</p>
 </div>
 
-<!-- CARD 5 -->
-<div class="glass-card p-8 rounded-3xl text-center card-hover">
-<div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
-<i class="fa-solid fa-star text-2xl"></i>
+<div class="bg-white p-8 rounded-3xl shadow-lg">
+<div class="flex gap-1 text-yellow-400 mb-4">
+★★★★★
 </div>
-
-<h3 class="font-bold text-xl mb-3">Más Confianza</h3>
-
-<p class="text-slate-600">
-Un perfil activo y profesional aumenta la credibilidad frente al cliente.
+<p class="text-slate-600 mb-6">
+“La página quedó increíble y ahora mucha más gente encuentra mi negocio.”
 </p>
+<strong>Emily C.</strong>
+<p class="text-sm text-slate-500">Sala de Belleza · Provenza</p>
 </div>
 
-<!-- CARD 6 -->
-<div class="glass-card p-8 rounded-3xl text-center card-hover">
-<div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
-<i class="fa-solid fa-store text-2xl"></i>
+</div>
+</div>
+</section>
+
+<!-- SOBRE MI -->
+<section class="bg-white px-6 py-24">
+<div class="max-w-5xl mx-auto glass-card rounded-[40px] p-10 md:p-14">
+
+<div class="grid md:grid-cols-[220px_1fr] gap-10 items-center">
+
+<div class="text-center">
+<img src="img/foto grado cara.jpeg" class="w-52 h-52 rounded-full object-cover mx-auto shadow-2xl border-4 border-white">
 </div>
 
-<h3 class="font-bold text-xl mb-3">Más Ventas</h3>
+<div>
 
-<p class="text-slate-600">
-Cuando más personas te encuentran y confían en ti, aumentan tus oportunidades de venta.
+<span class="inline-block px-4 py-2 bg-white rounded-full text-xs font-bold text-emerald-700 mb-4 shadow">
+Quién soy
+</span>
+
+<h2 class="text-4xl font-extrabold text-emerald-900 mb-2">
+Adrián Sanjuan
+</h2>
+
+<p class="text-emerald-600 font-semibold mb-6">
+Especialista en visibilidad digital local
 </p>
+
+<p class="text-slate-600 leading-relaxed mb-6">
+Soy Tecnólogo en Desarrollo de Sistemas.
+Investigué cómo las personas buscan negocios locales desde el celular y cómo Google decide cuál mostrar primero.
+
+Hoy ayudo a negocios a verse profesionales, generar confianza y aparecer mejor posicionados en Google Maps.
+</p>
+
+<div class="flex flex-wrap gap-3">
+<span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold">SEO Local</span>
+<span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold">Google Maps</span>
+<span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold">Desarrollo Web</span>
+<span class="bg-white px-4 py-2 rounded-full shadow text-sm font-semibold">SEO IA</span>
 </div>
 
 </div>
+</div>
+</div>
+</section>
 
+<!-- FAQ -->
+<section class="bg-slate-50 px-6 py-24">
+<div class="max-w-3xl mx-auto">
+
+<div class="text-center mb-14">
+<h2 class="text-4xl font-extrabold text-emerald-900 mb-4">
+Preguntas frecuentes
+</h2>
+</div>
+
+<div class="space-y-4">
+
+<details class="bg-white rounded-2xl p-6 shadow cursor-pointer">
+<summary class="font-bold text-emerald-900">¿En cuánto tiempo veré resultados?</summary>
+<p class="text-slate-600 mt-4">
+Las primeras mejoras normalmente se ven entre 2 y 4 semanas.
+</p>
+</details>
+
+<details class="bg-white rounded-2xl p-6 shadow cursor-pointer">
+<summary class="font-bold text-emerald-900">¿Sirve para negocios pequeños?</summary>
+<p class="text-slate-600 mt-4">
+Sí. De hecho los negocios pequeños son los que más aprovechan Google Maps.
+</p>
+</details>
+
+<details class="bg-white rounded-2xl p-6 shadow cursor-pointer">
+<summary class="font-bold text-emerald-900">¿Qué pasa si ya tengo perfil?</summary>
+<p class="text-slate-600 mt-4">
+Lo reviso, detecto errores y optimizo todo para mejorar visibilidad.
+</p>
+</details>
+
+</div>
 </div>
 </section>
 
@@ -296,15 +519,13 @@ Planes Disponibles
 </h2>
 
 <p class="text-slate-600">
-Precios pensados para negocios pequeños y medianos.
+Planes pensados para negocios pequeños y medianos.
 </p>
 </div>
 
 <div class="grid md:grid-cols-3 gap-8">
 
-<!-- BASICO -->
 <div class="glass-card p-10 rounded-3xl card-hover">
-
 <span class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase inline-block mb-6">
 Plan Básico
 </span>
@@ -314,28 +535,22 @@ Google Maps Activo
 </h3>
 
 <div class="text-4xl font-extrabold text-emerald-600 mb-6">
-<span class="text-2xl text-slate-400 line-through mr-2">$70.000</span>    
-$50.000 <span class="text-sm text-slate-400 font-normal">COP</span>
+$50.000
 </div>
 
 <ul class="space-y-4 text-slate-600 mb-10">
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Crear o reclamar perfil</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Corregir ubicación</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Categoría correcta</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Fotos del negocio</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Fotos 360 RV</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Aplicacion SEO</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Descripción profesional</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Taller de Reseñas</li>
+<li>✔ Crear o reclamar perfil</li>
+<li>✔ Corregir ubicación</li>
+<li>✔ Fotos del negocio</li>
+<li>✔ SEO Local</li>
+<li>✔ Descripción profesional</li>
 </ul>
 
 <a href="#contacto" class="block text-center py-4 rounded-2xl border-2 border-emerald-600 text-emerald-600 font-bold hover:bg-emerald-600 hover:text-white transition-all">
 Lo Quiero
 </a>
-
 </div>
 
-<!-- PREMIUM -->
 <div class="glass-card p-10 rounded-3xl border-2 border-emerald-500 card-hover relative overflow-hidden">
 
 <div class="absolute top-0 right-0 bg-emerald-500 text-white px-8 py-2 text-xs font-bold uppercase rounded-bl-2xl">
@@ -351,28 +566,23 @@ Google + Página Web
 </h3>
 
 <div class="text-4xl font-extrabold text-emerald-600 mb-6">
-<span class="text-2xl text-slate-400 line-through mr-2">$150.000</span>    
-$100.000 <span class="text-sm text-slate-400 font-normal">COP</span>
+$100.000
 </div>
 
 <ul class="space-y-4 text-slate-600 mb-10">
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Todo lo del Plan Básico</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Mini página web profesional</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Botón de WhatsApp</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Asesoria Marketing</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Enlace a Redes</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Publicación online gratis</li>
+<li>✔ Todo lo del Básico</li>
+<li>✔ Mini página web</li>
+<li>✔ Botón WhatsApp</li>
+<li>✔ Redes sociales</li>
+<li>✔ Publicación online</li>
 </ul>
 
 <a href="#contacto" class="block text-center py-4 rounded-2xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-all">
 Lo Quiero Ahora
 </a>
-
 </div>
 
-<!-- MENSUAL -->
 <div class="glass-card p-10 rounded-3xl card-hover">
-
 <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-xs font-bold uppercase inline-block mb-6">
 Plan Activo
 </span>
@@ -382,60 +592,40 @@ Mantenimiento Mensual
 </h3>
 
 <div class="text-4xl font-extrabold text-emerald-600 mb-6">
-$10.000 <span class="text-sm text-slate-400 font-normal">COP / mes</span>
+$10.000 <span class="text-sm text-slate-400">/ mes</span>
 </div>
 
 <ul class="space-y-4 text-slate-600 mb-10">
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Revisión del perfil</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Ajustes adicionales</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Mejora de reseñas</li>
-<li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Gestion de Metricas</li>
+<li>✔ Revisión del perfil</li>
+<li>✔ Ajustes adicionales</li>
+<li>✔ Mejora de reseñas</li>
+<li>✔ Gestión de métricas</li>
 </ul>
 
 <a href="#contacto" class="block text-center py-4 rounded-2xl border-2 border-emerald-600 text-emerald-600 font-bold hover:bg-emerald-600 hover:text-white transition-all">
 Lo Quiero
 </a>
-
 </div>
 
 </div>
-
-</div>
-</section>
-
-<!-- POR QUE YO -->
-<section class="px-6 py-20 bg-slate-50">
-<div class="max-w-4xl mx-auto glass-card p-10 rounded-[40px] text-center">
-
-<div class="w-24 h-24 bg-emerald-100 text-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
-<i class="fa-solid fa-user-graduate text-4xl"></i>
-</div>
-
-<h2 class="text-3xl font-bold text-emerald-900 mb-4">
-¿Por qué trabajar conmigo?
-</h2>
-
-<p class="text-slate-600 leading-relaxed max-w-2xl mx-auto">
-Porque combino conocimientos técnicos con enfoque práctico. No vendo términos complicados ni promesas vacías: mejoro lo que realmente necesita tu negocio para verse profesional, generar confianza y ser más fácil de encontrar.
-</p>
-
 </div>
 </section>
 
 <!-- CONTACTO -->
-<footer id="contacto" class="px-6 py-20 bg-emerald-950 text-center text-white">
+<footer id="contacto" class="px-6 py-24 bg-emerald-950 text-center text-white">
 
 <div class="max-w-4xl mx-auto">
 
-<h2 class="text-4xl font-extrabold mb-6">
-¿Empezamos hoy?
+<h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+Tu competencia ya está apareciendo.
+¿Tu negocio también?
 </h2>
 
-<p class="text-emerald-100 opacity-80 mb-10">
-Reviso tu negocio y te digo qué se puede mejorar.
+<p class="text-emerald-100 opacity-80 mb-10 text-lg">
+Reviso tu negocio y te digo qué puedes mejorar.
 </p>
 
-<a href="https://wa.me/573213834482?text=Hola%20Adrian,%20quiero%20mejorar%20mi%20negocio%20en%20Google%20Maps%20y%20atraer%20m%C3%A1s%20clientes." class="inline-flex items-center gap-3 bg-white text-emerald-900 px-10 py-5 rounded-3xl font-extrabold text-xl hover:scale-105 transition-transform">
+<a href="https://wa.me/573213834482?text=Hola%20Adrian,%20quiero%20mejorar%20mi%20negocio%20en%20Google%20Maps." class="inline-flex items-center gap-3 bg-white text-emerald-900 px-10 py-5 rounded-3xl font-extrabold text-xl hover:scale-105 transition-transform">
 <i class="fa-brands fa-whatsapp text-emerald-500 text-2xl"></i>
 ESCRÍBEME
 </a>
@@ -449,3 +639,4 @@ ESCRÍBEME
 
 </body>
 </html>
+```
